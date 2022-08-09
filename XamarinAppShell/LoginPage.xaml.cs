@@ -7,7 +7,7 @@ public partial class LoginPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void BtnLogin_Clicked(object sender, EventArgs e)
+	private async void BtnLogin_Clicked(object sender, EventArgs e)
 	{
 		Shell.Current.GoToAsync("MainPage");
 	}

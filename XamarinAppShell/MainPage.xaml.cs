@@ -1,8 +1,11 @@
-﻿namespace XamarinAppShell;
+﻿using XamarinAppShell.Helpers;
+
+namespace XamarinAppShell;
 
 public partial class MainPage : ContentPage
 {
 	int count = 0;
+	MessageHelper toast = new MessageHelper();
 
 	public MainPage()
 	{
@@ -20,11 +23,14 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
-
 	private void BtnLogOut_Clicked(object sender, EventArgs e)
 	{
 		Routing.RegisterRoute("LoginPage", typeof(LoginPage));
 		Shell.Current.GoToAsync("LoginPage");
+	}
+	private async void ToastButton_Clicked(object sender, EventArgs e)
+	{
+		await toast.GenerateToast("Hello World");
 	}
 }
 

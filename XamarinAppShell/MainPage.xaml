@@ -35,9 +35,15 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Button x:Name="ToastButton"
+                    Text="Generate Toast"
+                    Clicked="ToastButton_Clicked"
+                    HorizontalOptions="Center"/>
+
             <Button x:Name="BtnLogOut"
                     Text="LogOut"
                     Clicked="BtnLogOut_Clicked"
+                    IsVisible="False"
                     HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
