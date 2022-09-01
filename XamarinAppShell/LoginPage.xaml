@@ -14,7 +14,7 @@
     <Image Source="" HeightRequest="150" WidthRequest="150"/>
         <VerticalStackLayout Spacing="5">
             <Label Text="Welcome!" FontSize="28" TextColor="Gray" HorizontalTextAlignment="Center"/>
-            <Label Text="Login To Your Account!" FontSize="28" TextColor="Gray" HorizontalTextAlignment="Center"/>
+            <Label Text="Login To Your Account!" FontSize="24" TextColor="Gray" HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>        
         <StackLayout HorizontalOptions="Center">
             <Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="56" WidthRequest="56" CornerRadius="28">
@@ -27,7 +27,7 @@
 
         <StackLayout HorizontalOptions="Center">
             <Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="56" WidthRequest="56" CornerRadius="28">
-
+                <Image Source ="dotnet_bot.svg" WidthRequest="20" VerticalOptions="Center" HeightRequest="20" />
             </Frame>
             <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="Fill">
                 <Entry x:Name="txtPassword" IsPassword="True" Placeholder="Username" />

@@ -1,4 +1,6 @@
-﻿using XamarinAppShell.Helpers;
+﻿using CommunityToolkit.Maui.Views;
+using MauiApp1;
+using XamarinAppShell.Helpers;
 
 namespace XamarinAppShell;
 
@@ -6,12 +8,10 @@ public partial class MainPage : ContentPage
 {
 	int count = 0;
 	MessageHelper toast = new MessageHelper();
-
 	public MainPage()
 	{
 		InitializeComponent();
 	}
-
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
@@ -23,6 +23,7 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+
 	private void BtnLogOut_Clicked(object sender, EventArgs e)
 	{
 		Routing.RegisterRoute("LoginPage", typeof(LoginPage));
@@ -32,5 +33,17 @@ public partial class MainPage : ContentPage
 	{
 		await toast.GenerateToast("Hello World");
 	}
+
+	public async void DisplayPopup()
+	{
+		var popup = new SPops();
+
+		var result = await PopupExtensions.ShowPopupAsync<SPops>(this, popup);
+		Field1.Text = result.ToString();
+    }
+    private void PopUpBtn_Clicked(object sender, EventArgs e)
+	{
+		DisplayPopup();
+    }
 }
 

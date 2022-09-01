@@ -9,7 +9,7 @@ public partial class LoginPage : ContentPage
 
 	private async void BtnLogin_Clicked(object sender, EventArgs e)
 	{
-		Shell.Current.GoToAsync("MainPage");
+		await Shell.Current.GoToAsync("MainPage");
 	}
 
     protected override bool OnBackButtonPressed()

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiApp1.SPops"
+             CanBeDismissedByTappingOutsideOfPopup ="False"
+             xmlns:local="clr-namespace:XamarinAppShell.ViewModels">
+
+  
+
+    <VerticalStackLayout HeightRequest="300" WidthRequest="300" Padding="5" BackgroundColor="White"  Opacity="50">
+        <Label
+            Text="Asset Additional Fields"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="F1" Placeholder="Field 1" />
+        <Entry Placeholder="Field 2" />
+        <Entry Placeholder="Field 3" />
+        <Entry Placeholder="Field 4" />
+        <Entry Placeholder="Field 5" />
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="2">
+            <Button x:Name="btnSave" Text="Save" Grid.Column="0" BackgroundColor="Green" Clicked="btnSave_Clicked"/>
+            <Button x:Name="btnCancel" Text="Cancel" Grid.Column="1" BackgroundColor="Red" Clicked="btnCancel_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
+
+</toolkit:Popup>
