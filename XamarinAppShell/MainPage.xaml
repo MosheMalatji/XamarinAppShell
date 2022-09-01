@@ -43,8 +43,10 @@
             <Button x:Name="BtnLogOut"
                     Text="LogOut"
                     Clicked="BtnLogOut_Clicked"
-                    IsVisible="False"
+                    IsVisible="True"
                     HorizontalOptions="Center"/>
+
+           
 
         </VerticalStackLayout>
     </ScrollView>
